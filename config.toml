@@ -1,0 +1,57 @@
+base_url = "https://lachezarkolev.com"
+title = "Blog"
+description = "Lachezar Kolev's blog"
+compile_sass = true
+generate_feed = true
+build_search_index = false
+
+# The taxonomies to be rendered for the site and their configuration.
+taxonomies = [
+  {name = "tags", feed = true}, # each tag will have its own feed
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+[extra]
+author = "Lachezar Kolev"
+github = "https://github.com/lbkolev"
+email  = "lachezarkolevgg@gmail.com"
+
+timeformat = "%B %e, %Y" # e.g. June 14, 2021
+
+# Whether to support KaTeX globally
+katex = true
+
+[[extra.menu]]
+name = "Posts"
+url = "/"
+
+[[extra.menu]]
+name = "Tags"
+url = "tags"
+
+[[extra.menu]]
+name = "About"
+url = "about"
+
+[extra.footer]
+start_year = "2023"
+end_year = "∞"
+
+[extra.expressions]
+home = "Home"
+pinned = "Pinned"
+written_by = "Written by"
+on = "on"
+top = "Top of the page"
+tags = "Tags"
+
+disqus_discussion = "Discussion and feedback"
+
+p404 = "404: Page not found"
+p404_info = "Oops! We can't seem to find the page you are looking for."
+p404_back_home_start = "Let's"
+p404_back_home_with_link = "head back home"
+p404_back_home_end = "."

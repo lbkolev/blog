@@ -1,0 +1,64 @@
+{% import 'macros.html' as macros %}
+<!DOCTYPE html>
+<html lang="{{ config.extra.language_code | default(value="en") }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  {% if config.generate_feed %}
+    <link type="application/atom+xml" rel="alternate" href="{{ get_url(path=config.feed_filename | default(value="atom.xml")) | safe }}" title="{{ config.title | default(value="Blog") }}" />
+  {% endif %}
+
+  {% if config.extra.google_analytics %}
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+      ga('create', '{{ config.extra.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
+
+  {#{ macros::katex() }#}
+  {% include "partials/katex.html" %}
+</head>
+
+<body>
+  {% block header %}
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="{{ config.base_url | safe }}">
+        <h2 class="nav-title">{{ config.title | default(value="Blog")}}</h2>
+      </a>
+      <ul>
+        {% if config.extra.menu %}
+          {% for menu in config.extra.menu %}
+            <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
+          {% endfor %}
+        {% else %}
+          <li><a href="{{ config.base_url | safe }}">Posts</a></li>
+          <li><a href="{{ get_url(path="tags") | safe }}">Tags</a></li>
+          <li><a href="{{ get_url(path="about") | safe }}">About</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+  {% endblock header %}
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  {% block footer %}
+  <footer>
+    <span>
+      {%- if config.extra.footer -%}
+      &copy; {{ macros::time() }}
+      {%- endif -%}
+    </span>
+  </footer>
+  {% endblock footer %}
+</body>
+</html>
