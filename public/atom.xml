@@ -21,32 +21,4 @@
 </summary>
         
     </entry>
-    <entry xml:lang="en">
-        <title>Markdown Syntax Guide</title>
-        <published>2021-05-02T18:18:18+00:00</published>
-        <updated>2021-05-02T18:18:18+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lachezarkolev.com/markdown-syntax/" type="text/html"/>
-        <id>https://lachezarkolev.com/markdown-syntax/</id>
-        
-        <summary type="html">&lt;p&gt;This article offers ...&lt;&#x2F;p&gt;
-</summary>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Hello World</title>
-        <published>2021-05-01T11:11:00+00:00</published>
-        <updated>2021-05-01T11:11:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lachezarkolev.com/hello-world/" type="text/html"/>
-        <id>https://lachezarkolev.com/hello-world/</id>
-        
-        <summary type="html">&lt;p&gt;This is the source code of the traditional &lt;em&gt;Hello World&lt;&#x2F;em&gt; program.&lt;&#x2F;p&gt;
-</summary>
-        
-    </entry>
 </feed>
