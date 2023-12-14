@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://lachezarkolev.com/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  
+    <link type="application/atom+xml" rel="alternate" href="https://lachezarkolev.com/atom.xml" title="Blog" />
+  
+
+  
+
+  
+  
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+	integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+	integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+	integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+	onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="https://lachezarkolev.com">
+        <h2 class="nav-title">Blog</h2>
+      </a>
+      <ul>
+        
+          
+            <li><a href="https://lachezarkolev.com">Posts</a></li>
+          
+            <li><a href="https://lachezarkolev.com/tags">Tags</a></li>
+          
+            <li><a href="https://lachezarkolev.com/about">About</a></li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		<span>Written by</span> Public<br>
+  		
+  		<span>on&nbsp;</span><time datetime="2021-05-03T09:19:42+00:00">May  3, 2021</time>
+  	</div>
+  	<h1 class="post-title">Math Typesetting</h1>
+  	<div class="post-line"></div>
+  	<p>Mathematical notation in a project can be enabled by using third party JavaScript libraries.</p>
+<span id="continue-reading"></span>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a template under <code>/template/katex.html</code>.</li>
+<li>Within this template use the reference of <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Inlcude the template in your page templates like so: </li>
+</ul>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">{</span><span>% if page.extra.katex or section.extra.katex or config.extra.katex %}
+</span><span>  </span><span style="color:#bf616a;">{</span><span>% include &#39;</span><span style="color:#a3be8c;">katex.html</span><span>&#39; %}
+</span><span style="color:#bf616a;">{</span><span>% endif %}
+</span></code></pre>
+<ul>
+<li>To enable KaTex globally set the parameter <code>extra.katex</code> to <code>true</code> in a project's configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>extra.katex = true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> </p>
+<ol>
+<li>Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></li>
+</ol>
+<h3 id="examples">Examples</h3>
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\) 
+</p>
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+$$</p>
+
+  </div>
+
+	
+
+  <div class="pagination">
+  	
+		<a href="#" class="top">Top</a>
+		
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2023-12-14T19:29:27.649737+02:00">2023-∞</time></span>
+  </footer>
+  
+</body>
+</html>
