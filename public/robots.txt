@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://lachezarkolev.com/sitemap.xml
+Sitemap: https://lbkolev.github.io/sitemap.xml

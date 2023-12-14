@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://lachezarkolev.com/</loc>
+        <loc>https://lbkolev.github.io/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/about/</loc>
+        <loc>https://lbkolev.github.io/about/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/math-typesetting/</loc>
+        <loc>https://lbkolev.github.io/math-typesetting/</loc>
         <lastmod>2021-05-03T09:19:42+00:00</lastmod>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/page/1/</loc>
+        <loc>https://lbkolev.github.io/page/1/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/tags/</loc>
+        <loc>https://lbkolev.github.io/tags/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/tags/katex/</loc>
+        <loc>https://lbkolev.github.io/tags/katex/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/tags/math/</loc>
+        <loc>https://lbkolev.github.io/tags/math/</loc>
     </url>
     <url>
-        <loc>https://lachezarkolev.com/tags/sample/</loc>
+        <loc>https://lbkolev.github.io/tags/sample/</loc>
     </url>
 </urlset>
