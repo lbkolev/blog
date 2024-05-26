@@ -1,39 +1,43 @@
 {%- macro time() -%}
   {%- if config.extra.footer.start_year -%}
-  	{%- set start_year = config.extra.footer.start_year -%}
+    {%- set start_year = config.extra.footer.start_year -%}
   {%- else -%}
-  	{%- set start_year = now() | date(format="%Y") -%}
+    {%- set start_year = now() | date(format="%Y") -%}
   {%- endif -%}
   
   {%- if config.extra.footer.end_year -%}
-  	{%- set end_year = config.extra.footer.end_year -%}
+    {%- set end_year = config.extra.footer.end_year -%}
   {%- else -%}
-  	{%- set end_year = now() | date(format="%Y") -%}
+    {%- set end_year = now() | date(format="%Y") -%}
   {%- endif -%}
   
   {%- if start_year == end_year -%}
-  	{%- set year = start_year -%}
+    {%- set year = start_year -%}
   {%- else -%}
-  	{%- set year = start_year ~ "-" ~ end_year -%}
+    {%- set year = start_year ~ "-" ~ end_year -%}
   {%- endif -%}
 
   <time datetime="{{ now() }}">{{ year }}</time>
 {%- endmacro -%}
 
 {% macro page(page) -%}
-<a href="{{ page.permalink | safe }}" class="catalogue-item">
-  <div>
-    <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format=config.extra.timeformat |
-      default(value="%B %e, %Y")) }}</time>
+<div class="catalogue-item">
+  <a href="{{ page.permalink | safe }}" >
     <h1 class="catalogue-title">{{ page.title }}</h1>
-    <div class="catalogue-line"></div>
-    <p>
-      {%- if page.summary -%}
-      {{ page.summary | safe }}
-      {% else -%}
-      {{ page.content | striptags | truncate(length=280) | safe }}
-      {%- endif -%}
+    <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y")) }}</time>
+  </a>
+  {%- if page.taxonomies.tags -%}
+    <p class="catalogue-tags">tags: 
+      {%- for tag in page.taxonomies.tags %}
+        <a href="/tags/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {%- endfor %}
     </p>
-  </div>
-</a>
+  {%- endif -%}
+  <div class="catalogue-line"></div>
+  <p>
+    {%- if page.summary -%}
+      {{ page.summary | safe }}
+    {%- endif -%}
+  </p>
+</div>
 {%- endmacro %}

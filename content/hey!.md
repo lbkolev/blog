@@ -1,6 +1,5 @@
 +++
 title = "Hey!"
-description = ".."
 date = 2024-05-26
 draft = false
 
@@ -10,7 +9,5 @@ tags = ["general"]
 [extra]
 katex = false
 +++
-
-tags: `general`
 
 There's a non-trivial possibility that there will be blog posts around here somewhere, sometime in the future.
