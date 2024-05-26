@@ -15,7 +15,6 @@ highlight_code = true
 highlight_theme = "base16-ocean-light"
 
 [extra]
-author = "Lachezar Kolev"
 github = "https://github.com/lbkolev"
 email  = "lachezarkolevgg@gmail.com"
 
@@ -42,7 +41,6 @@ end_year = "∞"
 
 [extra.expressions]
 home = "Home"
-pinned = "Pinned"
 written_by = "Written by"
 on = "on"
 top = "Top of the page"
