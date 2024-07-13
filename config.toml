@@ -41,9 +41,6 @@ end_year = "∞"
 
 [extra.expressions]
 home = "Home"
-written_by = "Written by"
-on = "on"
-top = "Top of the page"
 tags = "Tags"
 
 disqus_discussion = "Discussion and feedback"
