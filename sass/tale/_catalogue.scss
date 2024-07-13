@@ -1,8 +1,9 @@
 .catalogue {
+  padding: 4rem 0;
+
   &-item {
     color: $default-color;
     display: block;
-    padding: 2rem 0;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {

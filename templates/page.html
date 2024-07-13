@@ -4,7 +4,7 @@
   <div class="post">
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-info">
-      <span>{{ config.extra.expressions.on | default(value="")}}&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y"))}}</time>
+      <span>&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y"))}}</time>
     </div>
     <div class="post-line"></div>
     {% if page.taxonomies.tags -%}
