@@ -1,4 +1,4 @@
-base_url = "https://lbkolev.github.io"
+base_url = "https://lbkolev.com"
 title = "Blog"
 description = "Lachezar Kolev's blog"
 compile_sass = true
