@@ -14,8 +14,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lbkolev.com/exposing-aggregated-dex-data/" type="text/html"/>
-        <id>https://lbkolev.com/exposing-aggregated-dex-data/</id>
+        <link rel="alternate" href="https://lbkolev.com/aggregating-cross-chain-dex-data/" type="text/html"/>
+        <id>https://lbkolev.com/aggregating-cross-chain-dex-data/</id>
         
         <content type="html">&lt;p&gt;Ethereum has adopted the &lt;a href=&quot;https:&#x2F;&#x2F;ethereum-magicians.org&#x2F;t&#x2F;a-rollup-centric-ethereum-roadmap&#x2F;4698&quot;&gt;rollup-centric&lt;&#x2F;a&gt; roadmap, positioning itself as the global settlement layer for &lt;a href=&quot;https:&#x2F;&#x2F;l2beat.com&#x2F;scaling&#x2F;summary&quot;&gt;potential layer-2s&lt;&#x2F;a&gt; more so than being direct target for &amp;quot;traditional&amp;quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.&lt;&#x2F;p&gt;
 &lt;p&gt;One of the problems we&#x27;re trying to solve at &lt;a href=&quot;https:&#x2F;&#x2F;polia.io&quot;&gt;Polia&lt;&#x2F;a&gt; is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that&#x27;ll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a &amp;quot;world-view&amp;quot; of the current state of all decentralised liquidity pools across multiple networks.&lt;&#x2F;p&gt;
