@@ -21,6 +21,13 @@
     </script>
   {% endif %}
 
+  {% if config.extra.mermaid %}
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  {% endif %}
+
   {#{ macros::katex() }#}
   {% include "partials/katex.html" %}
 </head>
@@ -61,4 +68,5 @@
   </footer>
   {% endblock footer %}
 </body>
+
 </html>

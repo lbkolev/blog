@@ -7,6 +7,10 @@
         <loc>https://lbkolev.com/about/</loc>
     </url>
     <url>
+        <loc>https://lbkolev.com/exposing-aggregated-dex-data/</loc>
+        <lastmod>2024-08-16</lastmod>
+    </url>
+    <url>
         <loc>https://lbkolev.com/hey/</loc>
         <lastmod>2024-05-26</lastmod>
     </url>
@@ -15,6 +19,9 @@
     </url>
     <url>
         <loc>https://lbkolev.com/tags/</loc>
+    </url>
+    <url>
+        <loc>https://lbkolev.com/tags/cs/</loc>
     </url>
     <url>
         <loc>https://lbkolev.com/tags/general/</loc>

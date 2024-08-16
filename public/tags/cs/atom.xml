@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Blog</title>
+    <title>Blog - cs</title>
     <subtitle>Lachezar Kolev&#x27;s blog</subtitle>
-    <link href="https://lbkolev.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://lbkolev.com/tags/cs/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lbkolev.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-08-16T00:00:00+00:00</updated>
-    <id>https://lbkolev.com/atom.xml</id>
+    <id>https://lbkolev.com/tags/cs/atom.xml</id>
     <entry xml:lang="en">
         <title>Aggregating Cross-chain DEX data</title>
         <published>2024-08-16T00:00:00+00:00</published>
@@ -269,20 +269,6 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
 &lt;li&gt;It prevents an exponential increase in node event consumption. This is particularly crucial when using an RPC provider like &lt;a href=&quot;https:&#x2F;&#x2F;infura.io&quot;&gt;Infura&lt;&#x2F;a&gt;, especially when integrating multiple networks. While running dedicated nodes can alleviate this to some extent, relying solely on external RPC providers for multi-network integration can lead to significant consumption-related challenges.&lt;&#x2F;li&gt;
 &lt;li&gt;The setup allows for the utilisation of real-time events by processes that offer additional functionality and flexibility.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Hey!</title>
-        <published>2024-05-26T00:00:00+00:00</published>
-        <updated>2024-05-26T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lbkolev.com/hey/" type="text/html"/>
-        <id>https://lbkolev.com/hey/</id>
-        
-        <content type="html">&lt;p&gt;:wave:&lt;&#x2F;p&gt;
 </content>
         
     </entry>

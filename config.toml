@@ -22,6 +22,7 @@ timeformat = "%B %e, %Y" # e.g. June 14, 2021
 
 # Whether to support KaTeX globally
 katex = true
+mermaid = true
 
 [[extra.menu]]
 name = "Posts"
