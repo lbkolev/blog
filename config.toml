@@ -27,10 +27,6 @@ katex = true
 mermaid = true
 
 [[extra.menu]]
-name = "Posts"
-url = "/"
-
-[[extra.menu]]
 name = "Tags"
 url = "tags"
 
