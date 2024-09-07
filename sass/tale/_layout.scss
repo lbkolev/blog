@@ -83,6 +83,9 @@ footer,
 footer {
   font-family: $serif-secondary;
   text-align: center;
+  border-top: .5px solid $grey-2;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .footer-content {
@@ -111,24 +114,22 @@ footer {
 .footer-right {
   text-align: right;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align items to the end (right) */
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer-right a:last-child {
-  margin-bottom: 0; /* Remove margin from the last item */
+  margin-bottom: 0;
 }
 
 .footer-right a i {
   margin-right: 5px;
 }
 
-/* Ensure icons are visible */
 .fab, .fas {
   font-size: 1rem;
 }
 
-/* Optional: Responsive adjustments */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -141,6 +142,6 @@ footer {
   }
 
   .footer-right {
-    align-items: center; /* Center align items on mobile */
+    align-items: center;
   }
 }
