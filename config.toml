@@ -3,7 +3,6 @@ title = "lbkolev.eth"
 description = "lachezar kolev's blog"
 compile_sass = true
 generate_feed = true
-build_search_index = false
 
 # The taxonomies to be rendered for the site and their configuration.
 taxonomies = [
