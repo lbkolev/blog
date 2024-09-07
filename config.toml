@@ -2,7 +2,8 @@ base_url = "https://lbkolev.com"
 title = "lbkolev.eth"
 description = "lachezar kolev's blog"
 compile_sass = true
-generate_feed = true
+generate_feeds = true
+feed_filenames = ["rss.xml", "atom.xml"]
 
 # The taxonomies to be rendered for the site and their configuration.
 taxonomies = [

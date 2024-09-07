@@ -6,9 +6,14 @@
 
   <link rel="stylesheet" href="https://lbkolev.com/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   
     <link type="application/atom+xml" rel="alternate" href="https://lbkolev.com/atom.xml" title="lbkolev.eth" />
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lbkolev.com/rss.xml">
+    
+
   
 
   
@@ -67,8 +72,8 @@
           <a href="/tags/cs/">cs</a>
         
       </p>
-    <p>Ethereum has adopted the <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric</a> roadmap, positioning itself as the global settlement layer for <a href="https://l2beat.com/scaling/summary">potential layer-2s</a> more so than being direct target for &quot;traditional&quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.</p>
-<p>One of the problems we're trying to solve at <a href="https://polia.io">Polia</a> is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that'll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a &quot;world-view&quot; of the current state of all decentralised liquidity pools across multiple networks.</p>
+    <p>Ethereum has adopted the <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric</a> roadmap, positioning itself as the global settlement layer for <a href="https://l2beat.com/scaling/summary">potential layer-2s</a> more so than being direct target for "traditional" layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.</p>
+<p>One of the problems we're trying to solve at <a href="https://polia.io">Polia</a> is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that'll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a "world-view" of the current state of all decentralised liquidity pools across multiple networks.</p>
 <p>The system used to provide the service consists of two core components, both developed in <a href="https://www.rust-lang.org/">Rust</a>:</p>
 <ul>
 <li><strong>node ETL</strong> - pipeline aggregating filtered live data into an append-only stream</li>
@@ -258,7 +263,7 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
     end
 </pre>
   </p>
-<p>The authentication happens through the <code>Authorization</code> header - as recommended by the <a href="https://www.rfc-editor.org/rfc/rfc6455.html">Websocket RFC</a> (more on how to authenticate can be found in the <a href="https://docs.polia.io/#authentication">official docs</a>). </p>
+<p>The authentication happens through the <code>Authorization</code> header - as recommended by the <a href="https://www.rfc-editor.org/rfc/rfc6455.html">Websocket RFC</a> (more on how to authenticate can be found in the <a href="https://docs.polia.io/#authentication">official docs</a>).</p>
 <p>All messages are parsed to determine the networks and dexes of interest of the one connecting. Clients can subscribe to as many networks and/or dexes as they're interested in - so long as they can handle the amount of data.</p>
 <pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>StreamHandler&lt;Result&lt;ws::Message, ws::ProtocolError&gt;&gt; </span><span style="color:#b48ead;">for </span><span>ClientSession {
 </span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">msg</span><span>: Result&lt;ws::Message, ws::ProtocolError&gt;, </span><span style="color:#bf616a;">ctx</span><span>: &amp;</span><span style="color:#b48ead;">mut Self::</span><span>Context) {
@@ -334,8 +339,23 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
 
   
   <footer>
-    <span>&copy; <time datetime="2024-09-07T12:28:49.219875+03:00">2023-∞</time></span>
+    <div class="footer-content">
+      <div class="footer-left">
+        Subscribe via <a href="/rss.xml">RSS</a>
+      </div>
+      <div class="footer-center">&copy; <time datetime="2024-09-07T14:33:50.021616+03:00">2023-∞</time></div>
+      <div class="footer-right">
+        <a href="https://github.com/lbkolev" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> lbkolev
+        </a>
+        <a href="https://x.com/lbkolev" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-x-twitter"></i> lbkolev
+        </a>  
+        <a href="mailto:lachezarkolevgg@gmail.com">lachezarkolevgg@gmail.com</a>
+      </div>
+    </div>
   </footer>
+  
   
 </body>
 

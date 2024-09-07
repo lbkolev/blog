@@ -7,9 +7,14 @@
 
   <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   {% if config.generate_feed %}
     <link type="application/atom+xml" rel="alternate" href="{{ get_url(path=config.feed_filename | default(value="atom.xml")) | safe }}" title="{{ config.title | default(value="Blog") }}" />
+    {% block rss %}
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+    {% endblock %}
+
   {% endif %}
 
   {% if config.extra.google_analytics %}
@@ -60,13 +65,28 @@
 
   {% block footer %}
   <footer>
-    <span>
-      {%- if config.extra.footer -%}
-      &copy; {{ macros::time() }}
-      {%- endif -%}
-    </span>
+    <div class="footer-content">
+      <div class="footer-left">
+        Subscribe via <a href="/rss.xml">RSS</a>
+      </div>
+      <div class="footer-center">
+        {%- if config.extra.footer -%}
+        &copy; {{ macros::time() }}
+        {%- endif -%}
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/lbkolev" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> lbkolev
+        </a>
+        <a href="https://x.com/lbkolev" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-x-twitter"></i> lbkolev
+        </a>  
+        <a href="mailto:lachezarkolevgg@gmail.com">lachezarkolevgg@gmail.com</a>
+      </div>
+    </div>
   </footer>
   {% endblock footer %}
+  
 </body>
 
 </html>

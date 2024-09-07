@@ -82,11 +82,65 @@ footer,
 
 footer {
   font-family: $serif-secondary;
-  padding: 2rem 0;
   text-align: center;
+}
 
-  span {
-    color: $default-color;
-    font-size: .8rem;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+  color: $default-color;
+  font-size: .8rem;
+}
+
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the end (right) */
+}
+
+.footer-right a:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+}
+
+.footer-right a i {
+  margin-right: 5px;
+}
+
+/* Ensure icons are visible */
+.fab, .fas {
+  font-size: 1rem;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-right {
+    align-items: center; /* Center align items on mobile */
   }
 }

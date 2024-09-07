@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>lbkolev.eth - cs</title>
     <subtitle>lachezar kolev&#x27;s blog</subtitle>
-    <link href="https://lbkolev.com/tags/cs/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://lbkolev.com"/>
+    <link rel="self" type="application/atom+xml" href="https://lbkolev.com/tags/cs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://lbkolev.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-08-16T00:00:00+00:00</updated>
     <id>https://lbkolev.com/tags/cs/atom.xml</id>
@@ -11,14 +11,20 @@
         <title>Aggregating cross-chain DEX data</title>
         <published>2024-08-16T00:00:00+00:00</published>
         <updated>2024-08-16T00:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://lbkolev.com/aggregating-cross-chain-dex-data/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://lbkolev.com/aggregating-cross-chain-dex-data/"/>
         <id>https://lbkolev.com/aggregating-cross-chain-dex-data/</id>
         
-        <content type="html">&lt;p&gt;Ethereum has adopted the &lt;a href=&quot;https:&#x2F;&#x2F;ethereum-magicians.org&#x2F;t&#x2F;a-rollup-centric-ethereum-roadmap&#x2F;4698&quot;&gt;rollup-centric&lt;&#x2F;a&gt; roadmap, positioning itself as the global settlement layer for &lt;a href=&quot;https:&#x2F;&#x2F;l2beat.com&#x2F;scaling&#x2F;summary&quot;&gt;potential layer-2s&lt;&#x2F;a&gt; more so than being direct target for &amp;quot;traditional&amp;quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.&lt;&#x2F;p&gt;
-&lt;p&gt;One of the problems we&#x27;re trying to solve at &lt;a href=&quot;https:&#x2F;&#x2F;polia.io&quot;&gt;Polia&lt;&#x2F;a&gt; is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that&#x27;ll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a &amp;quot;world-view&amp;quot; of the current state of all decentralised liquidity pools across multiple networks.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://lbkolev.com/aggregating-cross-chain-dex-data/">&lt;p&gt;Ethereum has adopted the &lt;a href=&quot;https:&#x2F;&#x2F;ethereum-magicians.org&#x2F;t&#x2F;a-rollup-centric-ethereum-roadmap&#x2F;4698&quot;&gt;rollup-centric&lt;&#x2F;a&gt; roadmap, positioning itself as the global settlement layer for &lt;a href=&quot;https:&#x2F;&#x2F;l2beat.com&#x2F;scaling&#x2F;summary&quot;&gt;potential layer-2s&lt;&#x2F;a&gt; more so than being direct target for &quot;traditional&quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the problems we&#x27;re trying to solve at &lt;a href=&quot;https:&#x2F;&#x2F;polia.io&quot;&gt;Polia&lt;&#x2F;a&gt; is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that&#x27;ll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a &quot;world-view&quot; of the current state of all decentralised liquidity pools across multiple networks.&lt;&#x2F;p&gt;
 &lt;p&gt;The system used to provide the service consists of two core components, both developed in &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;node ETL&lt;&#x2F;strong&gt; - pipeline aggregating filtered live data into an append-only stream&lt;&#x2F;li&gt;
@@ -208,7 +214,7 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
     end
 &lt;&#x2F;pre&gt;
   &lt;&#x2F;p&gt;
-&lt;p&gt;The authentication happens through the &lt;code&gt;Authorization&lt;&#x2F;code&gt; header - as recommended by the &lt;a href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc6455.html&quot;&gt;Websocket RFC&lt;&#x2F;a&gt; (more on how to authenticate can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;docs.polia.io&#x2F;#authentication&quot;&gt;official docs&lt;&#x2F;a&gt;). &lt;&#x2F;p&gt;
+&lt;p&gt;The authentication happens through the &lt;code&gt;Authorization&lt;&#x2F;code&gt; header - as recommended by the &lt;a href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc6455.html&quot;&gt;Websocket RFC&lt;&#x2F;a&gt; (more on how to authenticate can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;docs.polia.io&#x2F;#authentication&quot;&gt;official docs&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
 &lt;p&gt;All messages are parsed to determine the networks and dexes of interest of the one connecting. Clients can subscribe to as many networks and&#x2F;or dexes as they&#x27;re interested in - so long as they can handle the amount of data.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#eff1f5;color:#4f5b66;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span&gt;StreamHandler&amp;lt;Result&amp;lt;ws::Message, ws::ProtocolError&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;ClientSession {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;handle&lt;&#x2F;span&gt;&lt;span&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;msg&lt;&#x2F;span&gt;&lt;span&gt;: Result&amp;lt;ws::Message, ws::ProtocolError&amp;gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span&gt;: &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut Self::&lt;&#x2F;span&gt;&lt;span&gt;Context) {
