@@ -1,5 +1,5 @@
 +++
-title = "Aggregating Cross-chain DEX data"
+title = "Aggregating cross-chain DEX data"
 date = 2024-08-16
 draft = false
 

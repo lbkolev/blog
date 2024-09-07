@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Blog - cs</title>
-    <subtitle>Lachezar Kolev&#x27;s blog</subtitle>
+    <title>lbkolev.eth - cs</title>
+    <subtitle>lachezar kolev&#x27;s blog</subtitle>
     <link href="https://lbkolev.com/tags/cs/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lbkolev.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-08-16T00:00:00+00:00</updated>
     <id>https://lbkolev.com/tags/cs/atom.xml</id>
     <entry xml:lang="en">
-        <title>Aggregating Cross-chain DEX data</title>
+        <title>Aggregating cross-chain DEX data</title>
         <published>2024-08-16T00:00:00+00:00</published>
         <updated>2024-08-16T00:00:00+00:00</updated>
         <author>

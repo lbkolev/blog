@@ -19,17 +19,23 @@
     color: $default-tint;
     font-family: $serif-secondary;
     letter-spacing: .5px;
+    font-size: 0.8rem;
+    margin-top: 0;
     display: block;
-    margin-top: 0.2rem;
   }
 
   &-title {
     color: $default-shade;
-    display: block;
     font-family: $sans-serif;
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 600;
     margin: 0;
+  }
+
+  &-title-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   &-line {
@@ -41,6 +47,8 @@
 
   &-tags {
     margin-top: -0rem;
+    font-size: 0.9rem;
     display: block;
   }
+
 }

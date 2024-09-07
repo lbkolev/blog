@@ -17,11 +17,15 @@ pre {
 }
 
 pre code {
-  background-color: transparent;
-  color: inherit;
-  font-size: 100%;
-  padding: 0;
-  font: $code-font;
+  background-color: #f6f4f4;
+  color: #141313;
+  font-size: 75%;
+  padding: 15px;
+  border-left: 5px solid #007acc;
+  display: block;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 4px;
 }
 
 .highlight {
@@ -38,7 +42,7 @@ pre code {
 
   .lineno {
     color: $default-tint;
-    display: inline-block; // Ensures the null space also isn't selectable
+    display: inline-block;
     padding: 0 .75rem 0 .25rem;
     // Make sure numbers aren't selectable
     -webkit-user-select: none;

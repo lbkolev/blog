@@ -1,6 +1,6 @@
 base_url = "https://lbkolev.com"
-title = "Blog"
-description = "Lachezar Kolev's blog"
+title = "lbkolev.eth"
+description = "lachezar kolev's blog"
 compile_sass = true
 generate_feed = true
 build_search_index = false
@@ -15,7 +15,9 @@ highlight_code = true
 highlight_theme = "base16-ocean-light"
 
 [extra]
+x = "https://x.com/lbkolev"
 github = "https://github.com/lbkolev"
+linkedin = "https://linkedin.com/u/lbkolev"
 email  = "lachezarkolevgg@gmail.com"
 
 timeformat = "%B %e, %Y" # e.g. June 14, 2021
