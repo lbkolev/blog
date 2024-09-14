@@ -28,7 +28,7 @@
   {%- if page.taxonomies.tags -%}
   <p class="catalogue-tags">
     tags: {%- for tag in page.taxonomies.tags %}
-    <a href="/tags/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+    <a href="/tags/{{ tag | replace(from='/', to='-') }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
     {%- endfor %}
   </p>
   {%- endif -%}

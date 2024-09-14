@@ -200,9 +200,9 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
         DEFI --&amp;gt;&amp;gt; SRV: Send synthesised events for further client distribution
     end
     
-    SRV -&amp;gt;&amp;gt; SES: Send a msg to all client sessions each time a relevant event happens&amp;quot;
+    SRV -&amp;gt;&amp;gt; SES: Send a msg to all client sessions each time a relevant event happens
     SRV -&amp;gt;&amp;gt; SRV: Modify the user&amp;#x27;s used credits
-    SES -&amp;gt;&amp;gt; C: &amp;quot;ClientSession actor sends the messages to all end client entities&amp;quot;
+    SES -&amp;gt;&amp;gt; C: ClientSession actor sends the messages to all end client entities
     
     rect rgb(240, 240, 240)
         Note over C,SRV: Session End

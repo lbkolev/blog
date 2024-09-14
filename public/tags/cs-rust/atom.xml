@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-      <title>lbkolev.eth</title>
-      <link>https://lbkolev.com</link>
-      <description>lachezar kolev&#x27;s blog</description>
-      <generator>Zola</generator>
-      <language>en</language>
-      <atom:link href="https://lbkolev.com/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
-      <item>
-          <title>Aggregating cross-chain DEX data</title>
-          <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-          <author>Unknown</author>
-          <link>https://lbkolev.com/aggregating-cross-chain-dex-data/</link>
-          <guid>https://lbkolev.com/aggregating-cross-chain-dex-data/</guid>
-          <description xml:base="https://lbkolev.com/aggregating-cross-chain-dex-data/">&lt;p&gt;Ethereum has adopted the &lt;a href=&quot;https:&#x2F;&#x2F;ethereum-magicians.org&#x2F;t&#x2F;a-rollup-centric-ethereum-roadmap&#x2F;4698&quot;&gt;rollup-centric&lt;&#x2F;a&gt; roadmap, positioning itself as the global settlement layer for &lt;a href=&quot;https:&#x2F;&#x2F;l2beat.com&#x2F;scaling&#x2F;summary&quot;&gt;potential layer-2s&lt;&#x2F;a&gt; more so than being direct target for &quot;traditional&quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.&lt;&#x2F;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>lbkolev.eth - cs&#x2F;rust</title>
+    <subtitle>lachezar kolev&#x27;s blog</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://lbkolev.com/tags/cs-rust/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://lbkolev.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-16T00:00:00+00:00</updated>
+    <id>https://lbkolev.com/tags/cs-rust/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Aggregating cross-chain DEX data</title>
+        <published>2024-08-16T00:00:00+00:00</published>
+        <updated>2024-08-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lbkolev.com/aggregating-cross-chain-dex-data/"/>
+        <id>https://lbkolev.com/aggregating-cross-chain-dex-data/</id>
+        
+        <content type="html" xml:base="https://lbkolev.com/aggregating-cross-chain-dex-data/">&lt;p&gt;Ethereum has adopted the &lt;a href=&quot;https:&#x2F;&#x2F;ethereum-magicians.org&#x2F;t&#x2F;a-rollup-centric-ethereum-roadmap&#x2F;4698&quot;&gt;rollup-centric&lt;&#x2F;a&gt; roadmap, positioning itself as the global settlement layer for &lt;a href=&quot;https:&#x2F;&#x2F;l2beat.com&#x2F;scaling&#x2F;summary&quot;&gt;potential layer-2s&lt;&#x2F;a&gt; more so than being direct target for &quot;traditional&quot; layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.&lt;&#x2F;p&gt;
 &lt;p&gt;One of the problems we&#x27;re trying to solve at &lt;a href=&quot;https:&#x2F;&#x2F;polia.io&quot;&gt;Polia&lt;&#x2F;a&gt; is how to most efficiently provide direct exposure to real-time data from all relevant (liquidity unpoor) decentralised exchanges, without accruing too much unnecessary noise and pressure for the clients that&#x27;ll be consuming the data. Doing so would allow anyone the ability to acquire and keep up-to-date a &quot;world-view&quot; of the current state of all decentralised liquidity pools across multiple networks.&lt;&#x2F;p&gt;
 &lt;p&gt;The system used to provide the service consists of two core components, both developed in &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -266,7 +275,7 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
 &lt;li&gt;It prevents an exponential increase in node event consumption. This is particularly crucial when using an RPC provider like &lt;a href=&quot;https:&#x2F;&#x2F;infura.io&quot;&gt;Infura&lt;&#x2F;a&gt;, especially when integrating multiple networks. While running dedicated nodes can alleviate this to some extent, relying solely on external RPC providers for multi-network integration can lead to significant consumption-related challenges.&lt;&#x2F;li&gt;
 &lt;li&gt;The setup allows for the utilisation of real-time events by processes that offer additional functionality and flexibility.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</description>
-      </item>
-    </channel>
-</rss>
+</content>
+        
+    </entry>
+</feed>

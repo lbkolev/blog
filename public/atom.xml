@@ -200,9 +200,9 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
         DEFI --&amp;gt;&amp;gt; SRV: Send synthesised events for further client distribution
     end
     
-    SRV -&amp;gt;&amp;gt; SES: Send a msg to all client sessions each time a relevant event happens&amp;quot;
+    SRV -&amp;gt;&amp;gt; SES: Send a msg to all client sessions each time a relevant event happens
     SRV -&amp;gt;&amp;gt; SRV: Modify the user&amp;#x27;s used credits
-    SES -&amp;gt;&amp;gt; C: &amp;quot;ClientSession actor sends the messages to all end client entities&amp;quot;
+    SES -&amp;gt;&amp;gt; C: ClientSession actor sends the messages to all end client entities
     
     rect rgb(240, 240, 240)
         Note over C,SRV: Session End
@@ -275,26 +275,6 @@ As DEFI is mostly still dominated by uniswap-v2 and uniswap-v3, and the hundreds
 &lt;li&gt;It prevents an exponential increase in node event consumption. This is particularly crucial when using an RPC provider like &lt;a href=&quot;https:&#x2F;&#x2F;infura.io&quot;&gt;Infura&lt;&#x2F;a&gt;, especially when integrating multiple networks. While running dedicated nodes can alleviate this to some extent, relying solely on external RPC providers for multi-network integration can lead to significant consumption-related challenges.&lt;&#x2F;li&gt;
 &lt;li&gt;The setup allows for the utilisation of real-time events by processes that offer additional functionality and flexibility.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Hey!</title>
-        <published>2024-05-26T00:00:00+00:00</published>
-        <updated>2024-05-26T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://lbkolev.com/hey/"/>
-        <id>https://lbkolev.com/hey/</id>
-        
-        <content type="html" xml:base="https://lbkolev.com/hey/">&lt;p&gt;:wave:&lt;&#x2F;p&gt;
 </content>
         
     </entry>

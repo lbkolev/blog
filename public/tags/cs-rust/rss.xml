@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-      <title>lbkolev.eth</title>
+      <title>lbkolev.eth - cs&#x2F;rust</title>
       <link>https://lbkolev.com</link>
       <description>lachezar kolev&#x27;s blog</description>
       <generator>Zola</generator>
       <language>en</language>
-      <atom:link href="https://lbkolev.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://lbkolev.com/tags/cs-rust/rss.xml" rel="self" type="application/rss+xml"/>
       <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
       <item>
           <title>Aggregating cross-chain DEX data</title>

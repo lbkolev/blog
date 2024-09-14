@@ -4,9 +4,10 @@ date = 2024-08-16
 draft = false
 
 [taxonomies]
-tags = ["cs"]
+tags = ["cs", "cs/rust"]
 
 [extra]
+keywords = ["blockchain", "DEX", "cross-chain", "data aggregation", "Rust"]
 +++
 
 Ethereum has adopted the [rollup-centric](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) roadmap, positioning itself as the global settlement layer for [potential layer-2s](https://l2beat.com/scaling/summary) more so than being direct target for "traditional" layer-1 applications. The move allows layer-2s to acquire the economic security of Ethereum as a base layer, the layer-2s on the other hand provide Ethereum with fees for all the block (and blob!) space required to commit each proof. Having such a clear separation of responsibilities provides the means needed to scale the current biggest bottleneck: transaction throughput. One of the downsides of the approach is the increased scatteredness of liquidity and the sheer amount of liquidity pools getting deployed.
@@ -195,9 +196,9 @@ sequenceDiagram
         DEFI -->> SRV: Send synthesised events for further client distribution
     end
     
-    SRV ->> SES: Send a msg to all client sessions each time a relevant event happens"
+    SRV ->> SES: Send a msg to all client sessions each time a relevant event happens
     SRV ->> SRV: Modify the user's used credits
-    SES ->> C: "ClientSession actor sends the messages to all end client entities"
+    SES ->> C: ClientSession actor sends the messages to all end client entities
     
     rect rgb(240, 240, 240)
         Note over C,SRV: Session End
@@ -272,4 +273,3 @@ As previously outlined, the ETL-processed logs are propagated to an append-only 
 1. It enables easy scaling of the number of websocket instances running simultaneously (redis's append-only logs can be consumed by multiple entities).
 2. It prevents an exponential increase in node event consumption. This is particularly crucial when using an RPC provider like [Infura](https://infura.io), especially when integrating multiple networks. While running dedicated nodes can alleviate this to some extent, relying solely on external RPC providers for multi-network integration can lead to significant consumption-related challenges.
 3. The setup allows for the utilisation of real-time events by processes that offer additional functionality and flexibility.
-
